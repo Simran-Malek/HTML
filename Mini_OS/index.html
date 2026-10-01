@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Secret Lab</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #080b12;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+        }
+
+
+        /* MAIN LAB */
+
+        .lab {
+            width: 900px;
+            max-width: 100%;
+
+            background: #10141d;
+
+            border: 1px solid #252c3a;
+            border-radius: 20px;
+
+            padding: 35px;
+
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, 0.5);
+        }
+
+
+        /* HEADER */
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding-bottom: 25px;
+
+            border-bottom: 1px solid #252c3a;
+        }
+
+        .logo {
+            color: #8b5cf6;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .status {
+            color: #22c55e;
+            font-size: 13px;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #8b5cf6;
+        }
+
+        .hero p {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+
+        /* CHALLENGE */
+
+        .challenge {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+
+        /* CARD */
+
+        .card {
+            min-height: 220px;
+
+            background: #151a24;
+
+            border: 1px solid #252c3a;
+            border-radius: 16px;
+
+            padding: 25px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+
+            border-color: #8b5cf6;
+
+            box-shadow:
+                0 15px 40px rgba(139, 92, 246, 0.2);
+        }
+
+
+        /* CARD TOP */
+
+        .number {
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        .card h2 {
+            margin-top: 15px;
+            font-size: 22px;
+        }
+
+        .card p {
+            margin-top: 10px;
+
+            color: #94a3b8;
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        /* SECRET BUTTON */
+
+        .secret {
+            margin-top: 20px;
+
+            padding: 12px;
+
+            border: 1px solid #303847;
+            border-radius: 10px;
+
+            text-align: center;
+
+            color: #64748b;
+
+            cursor: pointer;
+
+            transition: 0.4s;
+        }
+
+        .secret:hover {
+            color: #22c55e;
+
+            border-color: #22c55e;
+
+            background: rgba(34, 197, 94, 0.08);
+
+            transform: scale(1.05);
+        }
+
+
+        /* SECRET TEXT */
+
+        .secret-message {
+            margin-top: 15px;
+
+            color: transparent;
+
+            background: #080b12;
+
+            border-radius: 8px;
+
+            padding: 10px;
+
+            transition: 0.5s;
+        }
+
+        .secret:hover .secret-message {
+            color: #22c55e;
+
+            background: transparent;
+        }
+
+
+        /* FOOTER */
+
+        .footer {
+            text-align: center;
+
+            margin-top: 35px;
+
+            color: #64748b;
+
+            font-size: 13px;
+        }
+
+        .footer span {
+            color: #8b5cf6;
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="lab">
+
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="logo">
+                &lt;/&gt; CSS LAB
+            </div>
+
+            <div class="status">
+                ● SYSTEM ONLINE
+            </div>
+
+        </header>
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <h1>
+                You think <span>CSS</span> is boring?
+            </h1>
+
+            <p>
+                Explore the lab and discover what HTML & CSS
+                can actually do.
+            </p>
+
+        </section>
+
+
+        <!-- CHALLENGES -->
+
+        <section class="challenge">
+
+
+            <!-- CARD 1 -->
+
+            <div class="card">
+
+                <div>
+
+                    <div class="number">
+                        LEVEL 01
+                    </div>
+
+                    <h2>
+                        HTML
+                    </h2>
+
+                    <p>
+                        Structure is the foundation
+                        of every website.
+                    </p>
+
+                </div>
+
+                <div class="secret">
+
+                    🔒 HOVER TO UNLOCK
+
+                    <div class="secret-message">
+                        Structure unlocked! 🚀
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="card">
+
+                <div>
+
+                    <div class="number">
+                        LEVEL 02
+                    </div>
+
+                    <h2>
+                        CSS
+                    </h2>
+
+                    <p>
+                        Styling can completely
+                        transform a simple page.
+                    </p>
+
+                </div>
+
+                <div class="secret">
+
+                    🔒 HOVER TO UNLOCK
+
+                    <div class="secret-message">
+                        CSS power activated! ⚡
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="card">
+
+                <div>
+
+                    <div class="number">
+                        LEVEL 03
+                    </div>
+
+                    <h2>
+                        YOU
+                    </h2>
+
+                    <p>
+                        The real question is...
+                        what will you build?
+                    </p>
+
+                </div>
+
+                <div class="secret">
+
+                    🔒 HOVER TO UNLOCK
+
+                    <div class="secret-message">
+                        You're ready. 👀
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+
+            Built with
+            <span>HTML + CSS</span>
+            · No JavaScript
+
+        </footer>
+
+
+    </div>
+
+
+</body>
+</html>
